@@ -1,9 +1,3 @@
-Note: this license covers only the Dockerfile and build scripts.
-Software contained in the resultant image has other usage and restrictions
-MPASM and MPLABX are copyrights of Microchip and are under propreitary license.
-These scripts download Microchip software from their public release URLS and use
-Microchip's Free license tier.
-
 This is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or
