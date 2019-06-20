@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERSION=5.15
+VERSION=5.20
 INSTALL_DIR=/opt/microchip/mplabx/v${VERSION}
 echo "Installing MPLABX v${VERSION}"
 
