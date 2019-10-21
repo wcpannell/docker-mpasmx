@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERSION=5.20
+VERSION=5.25
 INSTALL_DIR=/opt/microchip/mplabx/v${VERSION}
 echo "Installing MPLABX v${VERSION}"
 
@@ -24,7 +24,7 @@ fi
 
 # Unpack and install
 tar xf MPLABX-v${VERSION}-linux-installer.tar
-su -c "./MPLABX-v${VERSION}-linux-installer.sh --nolibrarycheck --nox11  -- --ipe 0 --mode unattended"
+su -c "./MPLABX-v${VERSION}-linux-installer.sh --nolibrarycheck --nox11  -- --ipe 0 --mode unattended --16bitmcu 0 --32bitmcu 0 --othermcu 0 --collectInfo 0"
 
 # strip uneeded packs
 echo "Cleaning up..."
@@ -36,8 +36,6 @@ rm -rf ${INSTALL_DIR}/packs/arm
 rm -rf ${INSTALL_DIR}/packs/Microchip/AT*
 rm -rf ${INSTALL_DIR}/packs/Microchip/SAM*
 rm -rf ${INSTALL_DIR}/packs/Microchip/XMEGA*
-rm -rf ${INSTALL_DIR}/packs/Microchip/PIC24*
-rm -rf ${INSTALL_DIR}/packs/Microchip/PIC32*
 rm -rf ${INSTALL_DIR}/mpasmx/examples
 find ${INSTALL_DIR} -type d -name docs -prune -exec rm -rf {} \;
 find ${INSTALL_DIR} -name *.pdf -exec rm {} \;
